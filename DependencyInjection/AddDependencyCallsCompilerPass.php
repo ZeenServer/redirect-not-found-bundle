@@ -32,9 +32,9 @@ class AddDependencyCallsCompilerPass implements CompilerPassInterface
     private function processObservers(ContainerBuilder $container)
     {
         $observers =  array();
-        $pool = $container->getDefinition('zeen.redirect_not_found.observer_pool');
+        $pool = $container->getDefinition('zeen.zeenredirect_not_found.observer_pool');
 
-        foreach ($container->findTaggedServiceIds('zeen.redirectnotfound.observer') as $id => $attrs) {
+        foreach ($container->findTaggedServiceIds('zeen.zeenredirectnotfound.observer') as $id => $attrs) {
             $observer= $container->getDefinition($id);
             $arguments = $observer->getArguments();
 
@@ -42,7 +42,7 @@ class AddDependencyCallsCompilerPass implements CompilerPassInterface
             $observers[$id] = $arguments[0];
         }
 
-        foreach ($container->findTaggedServiceIds('zeen.redirect_not_found.observer') as $id => $attrs) {
+        foreach ($container->findTaggedServiceIds('zeen.zeenredirect_not_found.observer') as $id => $attrs) {
             $basePath = false;
             foreach ($attrs as $attrRow) {
                 if (isset($attrRow[self::PATH_ATTR_NAME])) {
@@ -66,9 +66,9 @@ class AddDependencyCallsCompilerPass implements CompilerPassInterface
     private function processSubscribers(ContainerBuilder $container)
     {
         $subscribers =  array();
-        $pool = $container->getDefinition('zeen.redirect_not_found.observer_pool');
+        $pool = $container->getDefinition('zeen.zeenredirect_not_found.observer_pool');
 
-        foreach ($container->findTaggedServiceIds('zeen.redirect_not_found.subscriber') as $id => $attrs) {
+        foreach ($container->findTaggedServiceIds('zeen.zeebredirect_not_found.subscriber') as $id => $attrs) {
             $subscriberDef = $container->getDefinition($id);
             $subscribers[$id] = $this->getSubscribedPaths($subscriberDef);
         }
@@ -91,7 +91,7 @@ class AddDependencyCallsCompilerPass implements CompilerPassInterface
             throw new InvalidArgumentException(sprintf(
                 'Class "%s" must implements interface "%s"',
                 $class,
-                'Iphp\RedirectNotFoundBundle\Observer\NotFoundSubscriberInterface'
+                'Zeen\ZeenRedirectNotFoundBundle\Observer\NotFoundSubscriberInterface'
             ));
         }
         $paths = forward_static_call([$class, 'getPaths']);

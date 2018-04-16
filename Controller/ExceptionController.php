@@ -21,7 +21,7 @@ class ExceptionController extends Controller
     {
         if ($exception->getStatusCode() == 404) {
             $uri = str_replace('/app_dev.php', '', $request->getRequestUri());
-            $redirectUri = $this->get('zeen.redirectnotfound.observer_pool')->findRedirect($uri);
+            $redirectUri = $this->get('zeen.zeenredirectnotfound.observer_pool')->findRedirect($uri);
 
             if (!is_null($redirectUri)) {
                 return new RedirectResponse($redirectUri,301);
