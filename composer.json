@@ -1,0 +1,43 @@
+{
+    "name": "zeen/zeen-redirect-not-found-bundle",
+    "type": "bundle",
+    "description": "Redirects for not found urls",
+    "keywords": ["redirect","not found","symfony2","sonata admin"],
+    "homepage": "http://symfonydev.ru",
+    "license": "MIT",
+    "authors": [
+        {
+            "name":"Vitiko",
+            "email":"vitiko@mail.ru"
+        }
+    ],
+
+    "require":{
+        "symfony/framework-bundle":"~2.2"
+    },
+
+    "require-dev":{
+
+
+        "symfony/class-loader": "@stable",
+        "symfony/twig-bundle": "@stable",
+        "symfony/finder": "@stable",
+        "symfony/browser-kit": "@stable",
+        "symfony/css-selector": "@stable",
+        "symfony/form": "@stable",
+        "symfony/validator": "@stable",
+        "symfony/process": "@stable",
+        "symfony/yaml": "@stable",
+        "sensio/framework-extra-bundle": "@stable",
+        "doctrine/doctrine-bundle": "@stable",
+        "doctrine/orm": "@stable"
+    },
+
+    "autoload":{
+        "psr-0":{
+            "Zeen\\RedirectNotFoundBundle":""
+        }
+    },
+    "target-dir":"Zeen/RedirectNotFoundBundle"
+
+}
