@@ -87,7 +87,7 @@ class AddDependencyCallsCompilerPass implements CompilerPassInterface
     {
         $class = $subscriberDef->getClass();
 
-        if (!in_array('Iphp\RedirectNotFoundBundle\Observer\NotFoundSubscriberInterface', class_implements($class))) {
+        if (!in_array('Zeen\ZeenRedirectNotFoundBundle\Observer\NotFoundSubscriberInterface', class_implements($class))) {
             throw new InvalidArgumentException(sprintf(
                 'Class "%s" must implements interface "%s"',
                 $class,

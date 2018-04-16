@@ -35,9 +35,9 @@
 
     "autoload":{
         "psr-0":{
-            "Zeen\\RedirectNotFoundBundle":""
+            "Zeen\\ZeenRedirectNotFoundBundle":""
         }
     },
-    "target-dir":"Zeen/RedirectNotFoundBundle"
+    "target-dir":"Zeen/ZeenRedirectNotFoundBundle"
 
 }
