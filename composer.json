@@ -38,6 +38,7 @@
             "Zeen\\ZeenRedirectNotFoundBundle":""
         }
     },
-    "target-dir":"Zeen/ZeenRedirectNotFoundBundle"
+    "target-dir":"Zeen/ZeenRedirectNotFoundBundle",
+    "minimum-stability": "dev"
 
 }
